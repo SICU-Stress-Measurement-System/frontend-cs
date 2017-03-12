@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}" Width="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}" Background="{x:Null}" MinWidth="{DynamicResource {x:Static SystemParameters.MinimizedWindowWidthKey}}" MinHeight="{DynamicResource {x:Static SystemParameters.MinimizedWindowHeightKey}}" ResizeMode="CanResizeWithGrip" WindowState="Maximized">
     <Grid>
+        <Image Source="background.jpg" Stretch="Fill"/>
 
     </Grid>
 </Window>
