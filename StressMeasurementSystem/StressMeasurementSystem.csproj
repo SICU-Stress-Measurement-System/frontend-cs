@@ -94,7 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models" />
-    <Folder Include="ViewModels" />
+    <Folder Include="Controllers" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Windows\MainWindow.xaml">
