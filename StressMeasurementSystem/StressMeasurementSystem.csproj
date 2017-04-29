@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Models\Abstractions" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
