@@ -97,7 +97,7 @@
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Dictionary.xaml">
+    <Page Include="Resources\Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
