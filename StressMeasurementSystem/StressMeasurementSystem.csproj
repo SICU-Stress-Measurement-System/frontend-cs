@@ -90,7 +90,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Images\background.jpg" />
+    <Resource Include="Resources\Theme\background.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
