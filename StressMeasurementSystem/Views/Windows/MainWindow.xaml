@@ -8,5 +8,10 @@
         Title="MainWindow" Height="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}" Width="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}" Background="{x:Null}" MinWidth="{DynamicResource {x:Static SystemParameters.MinimizedWindowWidthKey}}" MinHeight="{DynamicResource {x:Static SystemParameters.MinimizedWindowHeightKey}}" ResizeMode="CanResizeWithGrip" WindowState="Maximized">
     <Grid>
         <Image Source="/Resources/Images/background.jpg" Stretch="UniformToFill"/>
+        <Menu Height="25" VerticalAlignment="Top">
+            <Menu.Background>
+                <SolidColorBrush Color="{DynamicResource BackgroundColor}"/>
+            </Menu.Background>
+        </Menu>
     </Grid>
 </Window>
