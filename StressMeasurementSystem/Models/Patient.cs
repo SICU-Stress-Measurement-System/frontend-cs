@@ -13,6 +13,14 @@
             public string Suffix { get; set; }
         }
 
+        struct PhoneNumber
+        {
+            internal enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
+
+            public string Number { get; set; }
+            public Type T { get; set; }
+        }
+
         #endregion
     }
 }
