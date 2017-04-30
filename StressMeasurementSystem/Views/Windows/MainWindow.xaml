@@ -8,10 +8,18 @@
         Title="MainWindow" Height="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}" Width="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}" Background="{x:Null}" MinWidth="{DynamicResource {x:Static SystemParameters.MinimizedWindowWidthKey}}" MinHeight="{DynamicResource {x:Static SystemParameters.MinimizedWindowHeightKey}}" ResizeMode="CanResizeWithGrip" WindowState="Maximized">
     <Grid>
         <Image Source="/Resources/Theme/Background.jpg" Stretch="UniformToFill"/>
-        <Menu x:Name="MenuBar" Height="{DynamicResource {x:Static SystemParameters.MenuBarHeightKey}}" VerticalAlignment="Top">
+        <Menu Height="{DynamicResource {x:Static SystemParameters.MenuBarHeightKey}}" VerticalAlignment="Top">
             <Menu.Background>
                 <SolidColorBrush Color="{DynamicResource BackgroundColor}"/>
             </Menu.Background>
+            <MenuItem Header="File" Height="{DynamicResource {x:Static SystemParameters.MenuButtonHeightKey}}" MinWidth="{DynamicResource {x:Static SystemParameters.MenuButtonWidthKey}}" FontFamily="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}">
+                <MenuItem.Foreground>
+                    <SolidColorBrush Color="{DynamicResource ForegroundColor}"/>
+                </MenuItem.Foreground>
+                <MenuItem.Background>
+                    <SolidColorBrush Color="{DynamicResource BackgroundColor}"/>
+                </MenuItem.Background>
+            </MenuItem>
         </Menu>
     </Grid>
 </Window>
