@@ -22,5 +22,12 @@
         }
 
         #endregion
+
+        #region Fields
+
+        private Name _name;
+        private int _age;
+
+        #endregion
     }
 }
