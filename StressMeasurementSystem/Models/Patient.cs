@@ -1,4 +1,6 @@
-﻿namespace StressMeasurementSystem.Models
+﻿using System.Net.Mail;
+
+namespace StressMeasurementSystem.Models
 {
     public class Patient
     {
@@ -24,6 +26,14 @@
             internal enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
 
             public string Number { get; set; }
+            public Type T { get; set; }
+        }
+
+        struct Email
+        {
+            internal enum Type {Home, Work, Other}
+
+            public MailAddress Address { get; set; }
             public Type T { get; set; }
         }
 
