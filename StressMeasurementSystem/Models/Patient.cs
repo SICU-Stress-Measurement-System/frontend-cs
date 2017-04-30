@@ -33,8 +33,8 @@
 
         private Name _name;
         private int _age;
-        private Organization _org;
-        private PhoneNumber _phone;
+        private Organization _organization;
+        private PhoneNumber _phoneNumber;
 
         #endregion
     }
