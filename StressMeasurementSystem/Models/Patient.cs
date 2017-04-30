@@ -45,6 +45,7 @@ namespace StressMeasurementSystem.Models
         private uint _age;
         private Organization _organization;
         private PhoneNumber _phoneNumber;
+        private Email _email;
 
         #endregion
 
