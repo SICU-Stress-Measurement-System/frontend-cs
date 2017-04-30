@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using System.Collections.Generic;
+using System.Net.Mail;
 
 namespace StressMeasurementSystem.Models
 {
@@ -44,20 +45,21 @@ namespace StressMeasurementSystem.Models
         private Name _name;
         private uint _age;
         private Organization _organization;
-        private PhoneNumber _phoneNumber;
-        private Email _email;
+        private List<PhoneNumber> _phoneNumbers;
+        private List<Email> _emails;
 
         #endregion
 
         #region Constructors
 
-        public Patient(Name name, uint age, Organization organization, PhoneNumber phoneNumber, Email email)
+        public Patient(Name name, uint age, Organization organization,
+            List<PhoneNumber> phoneNumbers, List<Email> emails)
         {
             _name = name;
             _age = age;
             _organization = organization;
-            _phoneNumber = phoneNumber;
-            _email = email;
+            _phoneNumbers = phoneNumbers;
+            _emails = emails;
         }
 
         #endregion
