@@ -13,6 +13,12 @@
             public string Suffix { get; set; }
         }
 
+        struct Organization
+        {
+            public string Company { get; set; }
+            public string JobTitle { get; set; }
+        }
+
         struct PhoneNumber
         {
             internal enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
