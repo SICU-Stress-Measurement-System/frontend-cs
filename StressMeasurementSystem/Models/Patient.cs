@@ -32,7 +32,7 @@
         #region Fields
 
         private Name _name;
-        private int _age;
+        private uint _age;
         private Organization _organization;
         private PhoneNumber _phoneNumber;
 
