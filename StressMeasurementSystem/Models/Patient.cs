@@ -37,5 +37,11 @@
         private PhoneNumber _phoneNumber;
 
         #endregion
+
+        #region Constructors
+
+
+
+        #endregion
     }
 }
