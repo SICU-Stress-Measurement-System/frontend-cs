@@ -20,6 +20,14 @@
                     <SolidColorBrush Color="{DynamicResource BackgroundColor}"/>
                 </MenuItem.Background>
             </MenuItem>
+            <MenuItem Header="Edit" Height="{DynamicResource {x:Static SystemParameters.MenuButtonHeightKey}}" MinWidth="{DynamicResource {x:Static SystemParameters.MenuButtonWidthKey}}" FontFamily="{DynamicResource {x:Static SystemFonts.MenuFontFamilyKey}}">
+                <MenuItem.Foreground>
+                    <SolidColorBrush Color="{DynamicResource ForegroundColor}"/>
+                </MenuItem.Foreground>
+                <MenuItem.Background>
+                    <SolidColorBrush Color="{DynamicResource BackgroundColor}"/>
+                </MenuItem.Background>
+            </MenuItem>
         </Menu>
     </Grid>
 </Window>
