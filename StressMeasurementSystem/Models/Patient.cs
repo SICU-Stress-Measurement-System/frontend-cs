@@ -51,7 +51,14 @@ namespace StressMeasurementSystem.Models
 
         #region Constructors
 
-
+        public Patient(Name name, uint age, Organization organization, PhoneNumber phoneNumber, Email email)
+        {
+            _name = name;
+            _age = age;
+            _organization = organization;
+            _phoneNumber = phoneNumber;
+            _email = email;
+        }
 
         #endregion
     }
