@@ -6,7 +6,7 @@ namespace StressMeasurementSystem.Models
     {
         #region Structs
 
-        struct Name
+        public struct Name
         {
             public string Prefix { get; set; }
             public string First { get; set; }
@@ -15,23 +15,23 @@ namespace StressMeasurementSystem.Models
             public string Suffix { get; set; }
         }
 
-        struct Organization
+        public struct Organization
         {
             public string Company { get; set; }
             public string JobTitle { get; set; }
         }
 
-        struct PhoneNumber
+        public struct PhoneNumber
         {
-            internal enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
+            public enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
 
             public string Number { get; set; }
             public Type T { get; set; }
         }
 
-        struct Email
+        public struct Email
         {
-            internal enum Type {Home, Work, Other}
+            public enum Type {Home, Work, Other}
 
             public MailAddress Address { get; set; }
             public Type T { get; set; }
