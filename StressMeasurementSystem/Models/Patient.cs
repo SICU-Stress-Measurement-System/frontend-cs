@@ -15,6 +15,11 @@ namespace StressMeasurementSystem.Models
             public string Middle { get; set; }
             public string Last { get; set; }
             public string Suffix { get; set; }
+
+            public override string ToString()
+            {
+                return Prefix + " " + First + " " + Middle + " " + Last + ", " + Suffix;
+            }
         }
 
         public struct Organization
