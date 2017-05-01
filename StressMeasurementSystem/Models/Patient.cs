@@ -31,7 +31,7 @@ namespace StressMeasurementSystem.Models
             public Type T { get; set; }
         }
 
-        public struct Email
+        public struct EmailAddress
         {
             public enum Type { Home, Work, Other }
 
@@ -47,20 +47,20 @@ namespace StressMeasurementSystem.Models
         private DateTime _dateOfBirth;
         private Organization? _organization;
         private List<PhoneNumber> _phoneNumbers;
-        private List<Email> _emails;
+        private List<EmailAddress> _emailAddresses;
 
         #endregion
 
         #region Constructors
 
         public Patient(Name? name, DateTime dateOfBirth, Organization? organization,
-            List<PhoneNumber> phoneNumbers, List<Email> emails)
+            List<PhoneNumber> phoneNumbers, List<EmailAddress> emailAddresses)
         {
             _name = name;
             _dateOfBirth = dateOfBirth;
             _organization = organization;
             _phoneNumbers = phoneNumbers;
-            _emails = emails;
+            _emailAddresses = emailAddresses;
         }
 
         #endregion
