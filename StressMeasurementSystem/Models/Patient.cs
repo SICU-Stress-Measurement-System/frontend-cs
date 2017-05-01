@@ -53,6 +53,15 @@ namespace StressMeasurementSystem.Models
 
         #region Constructors
 
+        public Patient()
+        {
+            _name = null;
+            _dateOfBirth = null;
+            _organization = null;
+            _phoneNumbers = null;
+            _emailAddresses = null;
+        }
+
         public Patient(Name? name, DateTime? dateOfBirth, Organization? organization,
             List<PhoneNumber> phoneNumbers, List<EmailAddress> emailAddresses)
         {
