@@ -16,12 +16,19 @@ namespace StressMeasurementSystem.Models
             }
         }
 
-        public SocialSecurityNumber SSN { get; set; }
-        public DateTime DOB { get; set; }
+        public SocialSecurityNumber Ssn { get; set; }
+        public DateTime Dob { get; set; }
 
         public Patient()
         {
+            Ssn = new SocialSecurityNumber();
+            Dob = new DateTime();
+        }
 
+        public Patient(SocialSecurityNumber ssn, DateTime dob)
+        {
+            Ssn = ssn;
+            Dob = dob;
         }
     }
 }
