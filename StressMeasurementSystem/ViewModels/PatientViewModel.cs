@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using StressMeasurementSystem.Models;
+﻿using StressMeasurementSystem.Models;
 
 namespace StressMeasurementSystem.ViewModels
 {
