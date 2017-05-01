@@ -9,7 +9,7 @@ namespace StressMeasurementSystem.ViewModels
 
         public PatientViewModel()
         {
-            _patient = null;
+            _patient = new Patient();
         }
 
         public PatientViewModel(Patient patient)
