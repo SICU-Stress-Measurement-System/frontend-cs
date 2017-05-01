@@ -44,7 +44,7 @@ namespace StressMeasurementSystem.Models
         #region Fields
 
         private Name? _name;
-        private DateTime _dateOfBirth;
+        private DateTime? _dateOfBirth;
         private Organization? _organization;
         private List<PhoneNumber> _phoneNumbers;
         private List<EmailAddress> _emailAddresses;
@@ -53,7 +53,7 @@ namespace StressMeasurementSystem.Models
 
         #region Constructors
 
-        public Patient(Name? name, DateTime dateOfBirth, Organization? organization,
+        public Patient(Name? name, DateTime? dateOfBirth, Organization? organization,
             List<PhoneNumber> phoneNumbers, List<EmailAddress> emailAddresses)
         {
             _name = name;
