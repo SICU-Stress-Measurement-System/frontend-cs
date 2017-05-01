@@ -8,7 +8,7 @@ namespace StressMeasurementSystem.Models
     {
         #region Structs
 
-        public struct Name
+        public struct NameInfo
         {
             public string Prefix { get; set; }
             public string First { get; set; }
@@ -22,13 +22,13 @@ namespace StressMeasurementSystem.Models
             }
         }
 
-        public struct Organization
+        public struct OrganizationInfo
         {
             public string Company { get; set; }
             public string JobTitle { get; set; }
         }
 
-        public struct PhoneNumber
+        public struct PhoneInfo
         {
             public enum Type { Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other }
 
@@ -36,7 +36,7 @@ namespace StressMeasurementSystem.Models
             public Type T { get; set; }
         }
 
-        public struct EmailAddress
+        public struct EmailInfo
         {
             public enum Type { Home, Work, Other }
 
@@ -48,11 +48,11 @@ namespace StressMeasurementSystem.Models
 
         #region Properties
 
-        public Name? NameOf { get; set; }
+        public NameInfo? Name { get; set; }
         public DateTime? DateOfBirth { get; set; }
-        public Organization? OrganizationOf { get; set; }
-        public List<PhoneNumber> PhoneNumbers { get; set; }
-        public List<EmailAddress> EmailAddresses { get; set; }
+        public OrganizationInfo? Organization { get; set; }
+        public List<PhoneInfo> PhoneNumbers { get; set; }
+        public List<EmailInfo> EmailAddresses { get; set; }
 
         #endregion
 
@@ -60,19 +60,19 @@ namespace StressMeasurementSystem.Models
 
         public Patient()
         {
-            NameOf = null;
+            Name = null;
             DateOfBirth = null;
-            OrganizationOf = null;
+            Organization = null;
             PhoneNumbers = null;
             EmailAddresses = null;
         }
 
-        public Patient(Name? name, DateTime? dateOfBirth, Organization? organization,
-            List<PhoneNumber> phoneNumbers, List<EmailAddress> emailAddresses)
+        public Patient(NameInfo? nameInfo, DateTime? dateOfBirth, OrganizationInfo? organizationInfo,
+            List<PhoneInfo> phoneNumbers, List<EmailInfo> emailAddresses)
         {
-            NameOf = name;
+            Name = nameInfo;
             DateOfBirth = dateOfBirth;
-            OrganizationOf = organization;
+            Organization = organizationInfo;
             PhoneNumbers = phoneNumbers;
             EmailAddresses = emailAddresses;
         }
