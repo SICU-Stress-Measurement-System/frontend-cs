@@ -41,13 +41,13 @@ namespace StressMeasurementSystem.Models
 
         #endregion
 
-        #region Fields
+        #region Properties
 
-        private Name? _name;
-        private DateTime? _dateOfBirth;
-        private Organization? _organization;
-        private List<PhoneNumber> _phoneNumbers;
-        private List<EmailAddress> _emailAddresses;
+        public Name? NameOf { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public Organization? OrganizationOf { get; set; }
+        public List<PhoneNumber> PhoneNumbers { get; set; }
+        public List<EmailAddress> EmailAddresses { get; set; }
 
         #endregion
 
@@ -55,21 +55,21 @@ namespace StressMeasurementSystem.Models
 
         public Patient()
         {
-            _name = null;
-            _dateOfBirth = null;
-            _organization = null;
-            _phoneNumbers = null;
-            _emailAddresses = null;
+            NameOf = null;
+            DateOfBirth = null;
+            OrganizationOf = null;
+            PhoneNumbers = null;
+            EmailAddresses = null;
         }
 
         public Patient(Name? name, DateTime? dateOfBirth, Organization? organization,
             List<PhoneNumber> phoneNumbers, List<EmailAddress> emailAddresses)
         {
-            _name = name;
-            _dateOfBirth = dateOfBirth;
-            _organization = organization;
-            _phoneNumbers = phoneNumbers;
-            _emailAddresses = emailAddresses;
+            NameOf = name;
+            DateOfBirth = dateOfBirth;
+            OrganizationOf = organization;
+            PhoneNumbers = phoneNumbers;
+            EmailAddresses = emailAddresses;
         }
 
         #endregion
