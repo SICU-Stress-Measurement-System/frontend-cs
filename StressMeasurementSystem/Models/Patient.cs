@@ -42,9 +42,9 @@ namespace StressMeasurementSystem.Models
 
         #region Fields
 
-        private Name _name;
-        private uint _age;
-        private Organization _organization;
+        private Name? _name;
+        private uint? _age;
+        private Organization? _organization;
         private List<PhoneNumber> _phoneNumbers;
         private List<Email> _emails;
 
