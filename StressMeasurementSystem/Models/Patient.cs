@@ -24,7 +24,7 @@ namespace StressMeasurementSystem.Models
 
         public struct PhoneNumber
         {
-            public enum Type {Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other}
+            public enum Type { Mobile, Home, Work, Main, WorkFax, HomeFax, Pager, Other }
 
             public string Number { get; set; }
             public Type T { get; set; }
@@ -32,7 +32,7 @@ namespace StressMeasurementSystem.Models
 
         public struct Email
         {
-            public enum Type {Home, Work, Other}
+            public enum Type { Home, Work, Other }
 
             public MailAddress Address { get; set; }
             public Type T { get; set; }
