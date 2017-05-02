@@ -74,5 +74,20 @@ namespace StressMeasurementSystem.Models
         }
 
         #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Consolidates two contacts such that the first (master) contact retains its original information, plus any unique information presented by the second (tribute) contact. Ultimately, the master is returned, after the tribute is nullified.
+        /// </summary>
+        /// <param name="master">the primary contact that will live on</param>
+        /// <param name="tribute">the secondary contact that will be destroyed after being linked</param>
+        /// <returns>The master contact containing the additional information attained from tribute, or <tt>null</tt> if attempting to link null arguments.</returns>
+        public static Contact Link(Contact master, Contact tribute)
+        {
+            return null;
+        }
+
+        #endregion
     }
 }
