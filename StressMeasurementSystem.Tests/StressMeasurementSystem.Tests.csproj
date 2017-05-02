@@ -46,6 +46,12 @@
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StressMeasurementSystem\StressMeasurementSystem.csproj">
+      <Project>{31dff2a2-83fc-4795-a37d-8820e913b57a}</Project>
+      <Name>StressMeasurementSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
