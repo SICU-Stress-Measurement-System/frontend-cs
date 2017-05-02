@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Net.Mail;
 
 namespace StressMeasurementSystem.Models
@@ -85,7 +86,19 @@ namespace StressMeasurementSystem.Models
         /// <returns>The master contact containing the additional information attained from tribute, or <tt>null</tt> if attempting to link null arguments.</returns>
         public static Contact Link(Contact master, Contact tribute)
         {
-            return null;
+            foreach (var property in typeof(Contact).GetProperties())
+            {
+                var defaultValue = property.PropertyType.IsValueType
+                    ? Activator.CreateInstance(property.PropertyType)
+                    : null;
+
+                if (property.GetValue(master) == defaultValue &&
+                    property.GetValue(tribute) != defaultValue)
+                {
+                    property.SetValue(master, property.GetValue(tribute));
+                }
+            }
+            return master;
         }
 
         #endregion
