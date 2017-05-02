@@ -84,7 +84,7 @@ namespace StressMeasurementSystem.Models
         /// <param name="master">the primary contact that will live on</param>
         /// <param name="tribute">the secondary contact that will be destroyed after being linked</param>
         /// <returns>The master contact containing the additional information attained from tribute, or <tt>null</tt> if attempting to link null arguments.</returns>
-        public static Contact Link(Contact master, Contact tribute)
+        public static Contact Link(ref Contact master, ref Contact tribute)
         {
             foreach (var property in typeof(Contact).GetProperties())
             {
@@ -98,6 +98,7 @@ namespace StressMeasurementSystem.Models
                     property.SetValue(master, property.GetValue(tribute));
                 }
             }
+            tribute = null;
             return master;
         }
 
