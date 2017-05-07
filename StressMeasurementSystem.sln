@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StressMeasurementSystem", "StressMeasurementSystem\StressMeasurementSystem.csproj", "{31DFF2A2-83FC-4795-A37D-8820E913B57A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StressMeasurementSystem.Tests", "StressMeasurementSystem.Tests\StressMeasurementSystem.Tests.csproj", "{5D47A1D5-1BF1-4CE4-BAF5-7D85BDE387DF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{31DFF2A2-83FC-4795-A37D-8820E913B57A} = {31DFF2A2-83FC-4795-A37D-8820E913B57A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
