@@ -22,18 +22,34 @@ namespace StressMeasurementSystem.Tests.Models
         [SetUp]
         public void SetUp()
         {
+            InitName();
+            InitOrganization();
+            InitPhoneNumbers();
+            InitEmailAddresses();
+
+            _contact = new Contact(_name, _organization, _phoneNumbers, _emailAddresses);
+        }
+
+        private void InitName()
+        {
             _name = new Contact.NameInfo
             {
                 First = "John",
                 Last = "Smith"
             };
+        }
 
+        private void InitOrganization()
+        {
             _organization = new Contact.OrganizationInfo
             {
                 Company = "Smith Co.",
                 JobTitle = "CEO"
             };
+        }
 
+        private void InitPhoneNumbers()
+        {
             _phoneNumbers = new List<Contact.PhoneInfo>();
 
             var phoneNumberWork = new Contact.PhoneInfo
@@ -49,7 +65,10 @@ namespace StressMeasurementSystem.Tests.Models
                 T = Contact.PhoneInfo.Type.Mobile
             };
             _phoneNumbers.Add(phoneNumberMobile);
+        }
 
+        private void InitEmailAddresses()
+        {
             _emailAddresses = new List<Contact.EmailInfo>();
 
             var emailAddressWork = new Contact.EmailInfo
@@ -59,7 +78,6 @@ namespace StressMeasurementSystem.Tests.Models
             };
             _emailAddresses.Add(emailAddressWork);
 
-            _contact = new Contact(_name, _organization, _phoneNumbers, _emailAddresses);
         }
 
         #endregion
