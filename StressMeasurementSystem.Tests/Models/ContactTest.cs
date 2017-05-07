@@ -17,6 +17,8 @@ namespace StressMeasurementSystem.Tests.Models
 
         #endregion
 
+        #region SetUp
+
         [SetUp]
         public void SetUp()
         {
@@ -51,20 +53,27 @@ namespace StressMeasurementSystem.Tests.Models
             _emailAddresses = new List<Contact.EmailInfo>();
 
             var emailAddressWork = new Contact.EmailInfo
-                {
-                    Address = new System.Net.Mail.MailAddress("jsmith@smith.com"),
-                    T = Contact.EmailInfo.Type.Work
-                };
+            {
+                Address = new System.Net.Mail.MailAddress("jsmith@smith.com"),
+                T = Contact.EmailInfo.Type.Work
+            };
             _emailAddresses.Add(emailAddressWork);
 
             _contact = new Contact(_name, _organization, _phoneNumbers, _emailAddresses);
         }
+
+        #endregion
+
+        #region Tests
 
         [Test]
         public void Test1()
         {
             Assert.True(true);
         }
+
+        #endregion
+
 
         [TearDown]
         public void TearDown()
