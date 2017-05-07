@@ -50,8 +50,7 @@ namespace StressMeasurementSystem.Tests.Models
 
             _emailAddresses = new List<Contact.EmailInfo>();
 
-            var emailAddressWork =
-                new Contact.EmailInfo
+            var emailAddressWork = new Contact.EmailInfo
                 {
                     Address = new System.Net.Mail.MailAddress("jsmith@smith.com"),
                     T = Contact.EmailInfo.Type.Work
