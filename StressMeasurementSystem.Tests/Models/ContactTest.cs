@@ -20,31 +20,42 @@ namespace StressMeasurementSystem.Tests.Models
         [SetUp]
         public void SetUp()
         {
-            _name = new Contact.NameInfo();
-            _name.First = "John";
-            _name.Last = "Smith";
+            _name = new Contact.NameInfo
+            {
+                First = "John",
+                Last = "Smith"
+            };
 
-            _organization = new Contact.OrganizationInfo();
-            _organization.Company = "Smith Co.";
-            _organization.JobTitle = "CEO";
+            _organization = new Contact.OrganizationInfo
+            {
+                Company = "Smith Co.",
+                JobTitle = "CEO"
+            };
 
             _phoneNumbers = new List<Contact.PhoneInfo>();
 
-            Contact.PhoneInfo phoneNumberWork = new Contact.PhoneInfo();
-            phoneNumberWork.Number = "(800) 123-4567";
-            phoneNumberWork.T = Contact.PhoneInfo.Type.Work;
+            var phoneNumberWork = new Contact.PhoneInfo
+            {
+                Number = "(800) 123-4567",
+                T = Contact.PhoneInfo.Type.Work
+            };
             _phoneNumbers.Add(phoneNumberWork);
 
-            Contact.PhoneInfo phoneNumberMobile = new Contact.PhoneInfo();
-            phoneNumberMobile.Number = "(123) 456-7890";
-            phoneNumberMobile.T = Contact.PhoneInfo.Type.Mobile;
+            var phoneNumberMobile = new Contact.PhoneInfo
+            {
+                Number = "(123) 456-7890",
+                T = Contact.PhoneInfo.Type.Mobile
+            };
             _phoneNumbers.Add(phoneNumberMobile);
 
             _emailAddresses = new List<Contact.EmailInfo>();
 
-            Contact.EmailInfo emailAddressWork = new Contact.EmailInfo();
-            emailAddressWork.Address = new System.Net.Mail.MailAddress("jsmith@smith.com");
-            emailAddressWork.T = Contact.EmailInfo.Type.Work;
+            var emailAddressWork =
+                new Contact.EmailInfo
+                {
+                    Address = new System.Net.Mail.MailAddress("jsmith@smith.com"),
+                    T = Contact.EmailInfo.Type.Work
+                };
             _emailAddresses.Add(emailAddressWork);
 
             _contact = new Contact(_name, _organization, _phoneNumbers, _emailAddresses);
