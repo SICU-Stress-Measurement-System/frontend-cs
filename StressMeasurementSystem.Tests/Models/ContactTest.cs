@@ -107,25 +107,25 @@ namespace StressMeasurementSystem.Tests.Models
         [Test]
         public void TestPhoneNumbers()
         {
-            Assert.Equals(_contact.PhoneNumbers.Count, 2);
+            Assert.AreEqual(_contact.PhoneNumbers.Count, 2);
 
             var pnWork = _contact.PhoneNumbers[0];
             Assert.AreEqual(pnWork.Number, "(800) 123-4567");
-            Assert.AreSame(pnWork.T, PhoneInfo.Type.Work);
+            Assert.AreEqual(pnWork.T, PhoneInfo.Type.Work);
 
             var pnMobile = _contact.PhoneNumbers[1];
             Assert.AreEqual(pnMobile.Number, "(123) 456-7890");
-            Assert.AreSame(pnMobile.T, PhoneInfo.Type.Mobile);
+            Assert.AreEqual(pnMobile.T, PhoneInfo.Type.Mobile);
         }
 
         [Test]
         public void TestEmailAddresses()
         {
-            Assert.Equals(_contact.EmailAddresses.Count, 1);
+            Assert.AreEqual(_contact.EmailAddresses.Count, 1);
 
             var eaWork = _contact.EmailAddresses[0];
             Assert.AreEqual(eaWork.Address, "jsmith@smith.com");
-            Assert.AreSame(eaWork.T, EmailInfo.Type.Work);
+            Assert.AreEqual(eaWork.T, EmailInfo.Type.Work);
         }
 
         #endregion
