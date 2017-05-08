@@ -86,9 +86,14 @@ namespace StressMeasurementSystem.Tests.Models
         #region Tests
 
         [Test]
-        public void Test1()
+        public void TestName()
         {
-            Assert.True(true);
+            var name = _contact.Name;
+            Assert.IsNull(name.Prefix);
+            Assert.AreEqual(name.First, "John");
+            Assert.IsNull(name.Middle);
+            Assert.AreEqual(name.Last, "Smith");
+            Assert.IsNull(name.Suffix);
         }
 
         #endregion
