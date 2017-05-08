@@ -97,7 +97,19 @@ namespace StressMeasurementSystem.Tests.Models
         [TearDown]
         public void TearDown()
         {
-            //TODO: Implement
+            _contact = null;
+            _name = new NameInfo();
+            _organization = new OrganizationInfo();
+            _phoneNumbers.ForEach(pn =>
+            {
+                pn = new PhoneInfo();
+            });
+            _phoneNumbers = null;
+            _emailAddresses.ForEach(ea =>
+            {
+                ea = new EmailInfo();
+            });
+            _emailAddresses = null;
         }
     }
 }
