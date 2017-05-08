@@ -118,6 +118,16 @@ namespace StressMeasurementSystem.Tests.Models
             Assert.AreSame(pnMobile.T, PhoneInfo.Type.Mobile);
         }
 
+        [Test]
+        public void TestEmailAddresses()
+        {
+            Assert.Equals(_contact.EmailAddresses.Count, 1);
+
+            var eaWork = _contact.EmailAddresses[0];
+            Assert.AreEqual(eaWork.Address, "jsmith@smith.com");
+            Assert.AreSame(eaWork.T, EmailInfo.Type.Work);
+        }
+
         #endregion
 
 
