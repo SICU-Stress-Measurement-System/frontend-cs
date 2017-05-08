@@ -130,7 +130,6 @@ namespace StressMeasurementSystem.Tests.Models
 
         #endregion
 
-
         [TearDown]
         public void TearDown()
         {
