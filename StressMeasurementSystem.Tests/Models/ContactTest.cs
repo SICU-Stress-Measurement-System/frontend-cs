@@ -96,6 +96,14 @@ namespace StressMeasurementSystem.Tests.Models
             Assert.IsNull(name.Suffix);
         }
 
+        [Test]
+        public void TestOrganization()
+        {
+            var org = _contact.Organization;
+            Assert.AreEqual(org.Company, "Smith Co.");
+            Assert.AreEqual(org.JobTitle, "CEO");
+        }
+
         #endregion
 
 
