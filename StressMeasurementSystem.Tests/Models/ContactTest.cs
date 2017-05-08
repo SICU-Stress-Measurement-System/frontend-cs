@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using StressMeasurementSystem.Models;
 using System.Collections.Generic;
+using static StressMeasurementSystem.Models.Contact;
 
 namespace StressMeasurementSystem.Tests.Models
 {
@@ -10,10 +11,10 @@ namespace StressMeasurementSystem.Tests.Models
         #region Fields
 
         private Contact _contact;
-        private Contact.NameInfo _name;
-        private Contact.OrganizationInfo _organization;
-        private List<Contact.PhoneInfo> _phoneNumbers;
-        private List<Contact.EmailInfo> _emailAddresses;
+        private NameInfo _name;
+        private OrganizationInfo _organization;
+        private List<PhoneInfo> _phoneNumbers;
+        private List<EmailInfo> _emailAddresses;
 
         #endregion
 
@@ -32,7 +33,7 @@ namespace StressMeasurementSystem.Tests.Models
 
         private void InitName()
         {
-            _name = new Contact.NameInfo
+            _name = new NameInfo
             {
                 First = "John",
                 Last = "Smith"
@@ -41,7 +42,7 @@ namespace StressMeasurementSystem.Tests.Models
 
         private void InitOrganization()
         {
-            _organization = new Contact.OrganizationInfo
+            _organization = new OrganizationInfo
             {
                 Company = "Smith Co.",
                 JobTitle = "CEO"
@@ -50,31 +51,31 @@ namespace StressMeasurementSystem.Tests.Models
 
         private void InitPhoneNumbers()
         {
-            _phoneNumbers = new List<Contact.PhoneInfo>();
+            _phoneNumbers = new List<PhoneInfo>();
 
-            var phoneNumberWork = new Contact.PhoneInfo
+            var phoneNumberWork = new PhoneInfo
             {
                 Number = "(800) 123-4567",
-                T = Contact.PhoneInfo.Type.Work
+                T = PhoneInfo.Type.Work
             };
             _phoneNumbers.Add(phoneNumberWork);
 
-            var phoneNumberMobile = new Contact.PhoneInfo
+            var phoneNumberMobile = new PhoneInfo
             {
                 Number = "(123) 456-7890",
-                T = Contact.PhoneInfo.Type.Mobile
+                T = PhoneInfo.Type.Mobile
             };
             _phoneNumbers.Add(phoneNumberMobile);
         }
 
         private void InitEmailAddresses()
         {
-            _emailAddresses = new List<Contact.EmailInfo>();
+            _emailAddresses = new List<EmailInfo>();
 
-            var emailAddressWork = new Contact.EmailInfo
+            var emailAddressWork = new EmailInfo
             {
                 Address = new System.Net.Mail.MailAddress("jsmith@smith.com"),
-                T = Contact.EmailInfo.Type.Work
+                T = EmailInfo.Type.Work
             };
             _emailAddresses.Add(emailAddressWork);
 
