@@ -104,6 +104,20 @@ namespace StressMeasurementSystem.Tests.Models
             Assert.AreEqual(org.JobTitle, "CEO");
         }
 
+        [Test]
+        public void TestPhoneNumbers()
+        {
+            Assert.Equals(_contact.PhoneNumbers.Count, 2);
+
+            var pnWork = _contact.PhoneNumbers[0];
+            Assert.AreEqual(pnWork.Number, "(800) 123-4567");
+            Assert.AreSame(pnWork.T, PhoneInfo.Type.Work);
+
+            var pnMobile = _contact.PhoneNumbers[1];
+            Assert.AreEqual(pnMobile.Number, "(123) 456-7890");
+            Assert.AreSame(pnMobile.T, PhoneInfo.Type.Mobile);
+        }
+
         #endregion
 
 
