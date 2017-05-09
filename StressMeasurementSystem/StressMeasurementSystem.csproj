@@ -67,10 +67,12 @@
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Plots\TemporalPlot.cs" />
     <Compile Include="ViewModels\AbstractPlotViewModel.cs" />
     <Compile Include="ViewModels\PatientViewModel.cs" />
     <Compile Include="ViewModels\SpectralPlotViewModel.cs" />
     <Compile Include="ViewModels\TemporalPlotViewModel.cs" />
+    <Compile Include="Views\UserControls\Plots\TemporalPlotView.xaml.cs" />
     <Compile Include="Views\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -111,7 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Abstractions\" />
-    <Folder Include="Models\Plots" />
     <Folder Include="Views\UserControls" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +125,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\UserControls\Plots\TemporalPlotView.xaml" />
     <Page Include="Views\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
