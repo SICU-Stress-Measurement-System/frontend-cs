@@ -67,6 +67,7 @@
     </Compile>
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\Plots\SpectralPlot.cs" />
     <Compile Include="Models\Plots\TemporalPlot.cs" />
     <Compile Include="ViewModels\AbstractPlotViewModel.cs" />
     <Compile Include="ViewModels\PatientViewModel.cs" />
