@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Abstractions\" />
+    <Folder Include="Models\Plots" />
     <Folder Include="Views\UserControls" />
   </ItemGroup>
   <ItemGroup>
