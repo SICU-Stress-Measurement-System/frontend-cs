@@ -1,6 +1,8 @@
-﻿namespace StressMeasurementSystem.Models.Plots
+﻿using OxyPlot;
+
+namespace StressMeasurementSystem.Models.Plots
 {
-    public class TemporalPlot
+    public class TemporalPlot : PlotModel
     {
 
     }
