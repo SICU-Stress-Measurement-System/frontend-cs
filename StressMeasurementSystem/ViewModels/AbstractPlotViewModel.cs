@@ -11,11 +11,8 @@ namespace StressMeasurementSystem.ViewModels
 
         protected AbstractPlotViewModel()
         {
-            PlotModel = new PlotModel
-            {
-                PlotAreaBackground = OxyColor.FromArgb(0, 0, 0, 0),
-                Title = "AbstractPlotView"
-            };
+            PlotModel = new PlotModel();
+            SeriesList = new List<DataPointSeries>();
         }
     }
 }
