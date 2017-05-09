@@ -112,7 +112,6 @@
     <Resource Include="Resources\Theme\Background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\Abstractions\" />
     <Folder Include="Views\UserControls" />
   </ItemGroup>
   <ItemGroup>
