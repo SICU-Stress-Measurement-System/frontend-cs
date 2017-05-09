@@ -4,9 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:StressMeasurementSystem.Views.UserControls.Plots"
+             xmlns:viewModels="clr-namespace:StressMeasurementSystem.ViewModels"
+             xmlns:oxy="http://oxyplot.org/wpf"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <viewModels:TemporalPlotViewModel/>
+    </UserControl.DataContext>
     <Grid>
-
+        <oxy:Plot Title="{Binding Title}"/>
     </Grid>
 </UserControl>
