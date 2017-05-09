@@ -8,10 +8,10 @@ namespace StressMeasurementSystem.ViewModels
     {
         protected AbstractPlotViewModel()
         {
-            Title = typeof(T).Name;
-            SeriesList = new List<DataPointSeries>();
-
             Plot = new T();
+
+            Title = Plot.Title;
+            SeriesList = new List<DataPointSeries>();
         }
 
         public string Title { get; }
