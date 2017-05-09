@@ -4,15 +4,19 @@ using OxyPlot.Wpf;
 
 namespace StressMeasurementSystem.ViewModels
 {
-    public abstract class AbstractPlotViewModel
+    public abstract class AbstractPlotViewModel<T> where T : PlotModel, new()
     {
-        protected PlotModel PlotModel { get; set; }
-        protected List<DataPointSeries> SeriesList { get; set; }
-
         protected AbstractPlotViewModel()
         {
-            PlotModel = new PlotModel();
+            Title = typeof(T).Name;
             SeriesList = new List<DataPointSeries>();
+
+            Plot = new T();
         }
+
+        public string Title { get; }
+        public IList<DataPointSeries> SeriesList { get; }
+
+        protected T Plot { get; set; }
     }
 }
