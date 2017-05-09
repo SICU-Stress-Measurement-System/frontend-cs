@@ -1,13 +1,9 @@
-﻿namespace StressMeasurementSystem.ViewModels
-{
-    public class TemporalPlotViewModel : AbstractPlotViewModel
-    {
-        public TemporalPlotViewModel()
-        {
-            PlotModel = new TemporalPlot();  //TODO: Create TemporalPlot model
-            Title = GetType().Name;
-        }
+﻿using StressMeasurementSystem.Models.Plots;
 
-        public string Title { get; }
+namespace StressMeasurementSystem.ViewModels
+{
+    public class TemporalPlotViewModel : AbstractPlotViewModel<TemporalPlot>
+    {
+
     }
 }

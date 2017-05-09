@@ -1,6 +1,8 @@
-﻿namespace StressMeasurementSystem.ViewModels
+﻿using StressMeasurementSystem.Models.Plots;
+
+namespace StressMeasurementSystem.ViewModels
 {
-    public class SpectralPlotViewModel : AbstractPlotViewModel
+    public class SpectralPlotViewModel : AbstractPlotViewModel<SpectralPlot>
     {
 
     }
